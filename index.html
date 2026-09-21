@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Kembara Si PeTaRa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="startScreen" class="screen start-screen">
+  <div class="start-card">
+    <div class="logo-badge">PeTaRa</div>
+    <h1>Kembara Si PeTaRa</h1>
+    <p class="meaning">PeTaRa = Petah Bicara</p>
+    <p class="tagline">Dengar • Faham • Tutur • Jelajah</p>
+    <label for="studentName">Nama Pengembara</label>
+    <input id="studentName" type="text" maxlength="24" autocomplete="off" placeholder="Masukkan nama kamu">
+    <p id="nameError" class="error" aria-live="polite"></p>
+    <button id="startBtn" class="primary-btn">🎮 MULA BERMAIN</button>
+  </div>
+</section>
+
+<section id="gameScreen" class="screen game-screen hidden">
+  <div id="worldViewport">
+    <div id="world">
+      <img id="worldMap" src="assets/map/petara-world-map.png" alt="Dunia Kembara Si PeTaRa">
+
+      <div id="checkpointLayer" aria-hidden="true"></div>
+
+      <div id="player">
+        <div id="playerName">Pengembara</div>
+        <img id="playerSprite" src="assets/player/petara-idle.png" alt="Si PeTaRa">
+      </div>
+    </div>
+
+    <header id="hud">
+      <div class="hud-player">
+        <img src="assets/player/petara-idle.png" alt="">
+        <div>
+          <span>PENGEMBARA</span>
+          <strong id="hudName">-</strong>
+        </div>
+      </div>
+      <div class="hud-score">⭐ <strong id="score">0</strong></div>
+      <div class="hud-progress">🚩 <strong id="progress">0/5</strong></div>
+    </header>
+
+    <div id="movementHelp">
+      <strong>CARA BERGERAK</strong>
+      <span>W / A / S / D atau anak panah</span>
+    </div>
+
+    <div id="interactionMessage" class="interaction hidden"></div>
+
+    <div id="dpad" aria-label="Kawalan pergerakan">
+      <button data-key="ArrowUp" class="up">▲</button>
+      <button data-key="ArrowLeft" class="left">◀</button>
+      <button data-key="ArrowDown" class="down">▼</button>
+      <button data-key="ArrowRight" class="right">▶</button>
+    </div>
+  </div>
+</section>
+
+<div id="checkpointModal" class="modal hidden">
+  <div class="modal-card">
+    <button id="closeModal" class="close-btn" aria-label="Tutup">×</button>
+    <div class="modal-icon">🚩</div>
+    <h2 id="modalTitle">Misi 1</h2>
+    <p id="modalText">Aktiviti checkpoint akan dimasukkan dalam Fasa 2.</p>
+    <button id="demoCompleteBtn" class="primary-btn">✓ UJI SELESAIKAN MISI</button>
+    <small>Butang ini sementara untuk menguji sistem checkpoint Fasa 1.</small>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
