@@ -52,6 +52,7 @@
     </div>
 
     <div id="interactionMessage" class="interaction hidden"></div>
+    <button id="interactBtn" class="interact-btn hidden">✨ MASUK MISI</button>
 
     <div id="dpad" aria-label="Kawalan pergerakan">
       <button data-key="ArrowUp" class="up">▲</button>
@@ -63,13 +64,27 @@
 </section>
 
 <div id="checkpointModal" class="modal hidden">
-  <div class="modal-card">
+  <div class="modal-card activity-card">
     <button id="closeModal" class="close-btn" aria-label="Tutup">×</button>
     <div class="modal-icon">🚩</div>
-    <h2 id="modalTitle">Misi 1</h2>
-    <p id="modalText">Aktiviti checkpoint akan dimasukkan dalam Fasa 2.</p>
-    <button id="demoCompleteBtn" class="primary-btn">✓ UJI SELESAIKAN MISI</button>
-    <small>Butang ini sementara untuk menguji sistem checkpoint Fasa 1.</small>
+    <h2 id="modalTitle">Misi</h2>
+    <div id="activityArea"></div>
+  </div>
+</div>
+
+<div id="resultModal" class="modal hidden">
+  <div class="modal-card result-card">
+    <div class="trophy">🏆</div>
+    <h2>TAHNIAH!</h2>
+    <p id="resultText"></p>
+    <div class="result-score">⭐ <span id="resultScore">0</span> markah</div>
+    <p>🚩 Checkpoint: <strong>5/5</strong></p>
+    <p>🎧 Mendengar selesai • 🎙️ Bertutur selesai</p>
+    <p class="result-cheer">🌟 Tahniah! Kamu kini seorang Si PeTaRa yang hebat!</p>
+    <div class="activity-actions">
+      <button id="restartBtn" class="primary-btn">🔄 MAIN SEMULA</button>
+      <button id="homeBtn" class="next-btn">🏠 LAMAN UTAMA</button>
+    </div>
   </div>
 </div>
 
